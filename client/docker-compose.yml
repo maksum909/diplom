@@ -4,10 +4,11 @@ services:
       context: .
       dockerfile: DockerfileClient
     ports:
-      - "5173:5173"
+      - "0.0.0.0:5173:5173"  # Bind to all interfaces
     volumes:
      - .:/app
      - /app/node_modules
     environment:
       NODE_ENV: development
-    command: npm run dev
+      HOST: 0.0.0.0  # Allow external connections
+    command: npm run dev -- --host 0.0.0.0
