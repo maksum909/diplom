@@ -121,7 +121,7 @@ const AiChat = () => {
         setIsLoading(true);
 
         try {
-            const response = await fetch('http://localhost:8000/api/ai-chat/', {
+            const response = await fetch('http://145.223.81.31:8000/api/ai-chat/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
