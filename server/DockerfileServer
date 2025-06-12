@@ -18,10 +18,9 @@ RUN npx prisma generate
 COPY . .
 
 # Create non-root user
-RUN addgroup -g 1001 -S nodejs && \
-    adduser -S nodeuser -u 1001 -G nodejs && \
+RUN groupadd -g 1001 nodejs && \
+    useradd -u 1001 -g nodejs -m nodeuser && \
     chown -R nodeuser:nodejs /usr/src/app
-
 # Switch to non-root user
 USER nodeuser
 
@@ -29,8 +28,8 @@ USER nodeuser
 EXPOSE 8000
 
 # Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD node healthcheck.js || exit 1
+# HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+#     CMD node healthcheck.js || exit 1
 
 # Start the application in development mode with host binding
 CMD ["npm", "start"]
