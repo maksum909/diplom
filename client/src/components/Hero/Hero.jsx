@@ -31,7 +31,7 @@ const Hero = () => {
             <span>Forget all difficulties in finding a residence for you</span>
           </div>
 
-          <SearchBar/>
+          <SearchBar filter={filter} setFilter={setFilter}/>
 
           <div className="flexCenter stats">
             <div className="flexColCenter stat">
