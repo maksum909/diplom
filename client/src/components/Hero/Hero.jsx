@@ -3,6 +3,7 @@ import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import SearchBar from "../SearchBar/SearchBar";
 const Hero = () => {
+  const [filter, setFilter] = useState("");
   return (
     <section className="hero-wrapper">
       <div className="paddings innerWidth flexCenter hero-container">
