@@ -15,6 +15,7 @@ const buildingsData = [];
 
 async function fetchResidencies() {
     try {
+        buildingsData.length = 0;
         const residencies = await prisma.residency.findMany({
             orderBy: {
                 createdAt: "desc",
@@ -28,9 +29,11 @@ async function fetchResidencies() {
 
         buildingsData.push(...residenciesForResponse);
 
-        console.log("Loaded residencies:", buildingsData.length);
+        return buildingsData;
+
     } catch (err) {
         console.error("Error fetching residencies:", err);
+        return [];
     }
 }
 
