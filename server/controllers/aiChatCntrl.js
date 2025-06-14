@@ -126,7 +126,6 @@ export const aiChat = async (req, res) => {
         const systemPrompt = createSystemPrompt(language, buildingsData);
         const fullPrompt = `${systemPrompt}\n\nКЛІЄНТ: ${message}\n\nВІДПОВІДЬ:`;
 
-        console.log(fullPrompt);
 
         // Генерація відповіді через Gemini
         const result = await model.generateContent(fullPrompt);

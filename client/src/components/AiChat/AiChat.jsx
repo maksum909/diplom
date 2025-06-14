@@ -168,24 +168,38 @@ const AiChat = () => {
     };
 
     const formatMessage = (content) => {
-        // Обробка лінків в повідомленнях
-        const linkRegex = /(https?:\/\/[^\s]+)/g;
-        return content.split(linkRegex).map((part, index) => {
-            if (part.match(linkRegex)) {
-                return (
-                    <a
-                        key={index}
-                        href={part}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="message-link"
-                    >
-                        {part}
-                    </a>
-                );
+        const markdownLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+
+        const parts = [];
+        let lastIndex = 0;
+        let match;
+
+        while ((match = markdownLinkRegex.exec(content)) !== null) {
+            if (match.index > lastIndex) {
+                parts.push(content.substring(lastIndex, match.index));
             }
-            return part;
-        });
+
+            parts.push(
+                <a
+                    key={match.index}
+                    href={match[2]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="message-link"
+                >
+                    {match[1]}
+                </a>
+            );
+
+            lastIndex = match.index + match[0].length;
+        }
+
+        if (lastIndex < content.length) {
+            parts.push(content.substring(lastIndex));
+        }
+
+        // Якщо жодних посилань не знайдено, повертаємо просто текст
+        return parts.length > 0 ? parts : content;
     };
 
     return (
