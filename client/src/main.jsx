@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
        //redirect_uri: "https://full-stack-real-estate-youtube-sooty.vercel.app"https://dev-n4h6byrcjwasuswo.us.auth0.com/api/v2/
       redirect_uri: "https://homyz-estate.xyz"
      }}
-     audience="https://homyz-estate.xyz"
+     audience="https://homyz-estate.xyz/api"
      scope="openid profile email"
     >
       <App />
