@@ -13,9 +13,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       clientId="ZPjCNx5vEgkbX2YPTEk9hEcepRspuqVV"
      authorizationParams={{
        //redirect_uri: "https://full-stack-real-estate-youtube-sooty.vercel.app"https://dev-n4h6byrcjwasuswo.us.auth0.com/api/v2/
-      redirect_uri: "http://localhost:5173"
+      redirect_uri: "https://homyz-estate.xyz"
      }}
-     audience="http://localhost:8000"
+     audience="https://homyz-estate.xyz"
      scope="openid profile email"
     >
       <App />
