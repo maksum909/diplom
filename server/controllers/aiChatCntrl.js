@@ -45,7 +45,7 @@ function createSystemPrompt(language, buildingsData) {
     1. Завжди відповідай українською мовою
     2. Аналізуй потреби клієнта (бюджет, локація, опис, кількість кімнат)
     3. Рекомендуй найбільш підходящі варіанти
-    4. Для кожної рекомендації ОБОВ'ЯЗКОВО додавай пряме посилання створене з домену http://localhost:5173/properties/ в кінці айді запису
+    4. Для кожної рекомендації ОБОВ'ЯЗКОВО додавай пряме посилання створене з домену https://homyz-estate.xyz/properties/ в кінці айді запису
     5. Порівнюй варіанти за ціною та локацією
     6. Враховуй додаткові зручності
     7. Будь дружелюбним та корисним
@@ -122,6 +122,8 @@ export const aiChat = async (req, res) => {
         const buildingsData = await fetchResidencies();
         const systemPrompt = createSystemPrompt(language, buildingsData);
         const fullPrompt = `${systemPrompt}\n\nКЛІЄНТ: ${message}\n\nВІДПОВІДЬ:`;
+
+        console.log(fullPrompt);
 
         // Генерація відповіді через Gemini
         const result = await model.generateContent(fullPrompt);

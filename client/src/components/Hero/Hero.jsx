@@ -5,7 +5,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { useState } from "react";
 
 const Hero = () => {
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState('');
   return (
     <section className="hero-wrapper">
       <div className="paddings innerWidth flexCenter hero-container">
