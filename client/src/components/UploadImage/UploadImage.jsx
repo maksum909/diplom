@@ -53,10 +53,10 @@ const UploadImage = ({
 
       <Group position="center" mt={"xl"}>
         <Button variant="default" onClick={prevStep}>
-          Back
+          Назад
         </Button>
         <Button onClick={handleNext} disabled={!imageURL}>
-          Next
+          Наступний крок
         </Button>
       </Group>
     </div>
