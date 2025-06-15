@@ -14,7 +14,7 @@
     right: 30px;
     z-index: 1;
   }
-  
+
   .r-card > img {
     width: 15rem;
     height: 10rem;
@@ -27,11 +27,23 @@
   .r-card > :nth-child(4) {
     font-size: 1.5rem;
   }
-  .r-card > :nth-child(5) {
+  /* .r-card > :nth-child(5) {
     font-size: 0.7rem;
     width: 15rem;
+  } */
+  .r-card> :nth-child(5) {
+    font-size: 0.7rem;
+    width: 15rem;
+
+    /* нові властивості для обрізання тексту */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* кількість рядків, які залишити */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  
+
   .r-card:hover {
     scale: 1.025;
     cursor: pointer;

@@ -39,7 +39,7 @@ async function fetchResidencies() {
 
 function createSystemPrompt(language, buildingsData) {
     const prompts = {
-        uk: `Ти - експертний консультант з нерухомості. Твоє завдання допомагати клієнтам знайти ідеальну нерухомість для оренди.
+        uk: `Ти - експертний консультант з нерухомості. Твоє завдання допомагати клієнтам знайти ідеальну нерухомість для купівлі.
 
     ДОСТУПНА НЕРУХОМІСТЬ:
     ${JSON.stringify(buildingsData, null, 2)}
