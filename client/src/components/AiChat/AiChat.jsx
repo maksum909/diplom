@@ -73,6 +73,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Loader2 } from 'lucide-react';
 import './AiChat.css';
+import { Link } from 'react-router-dom';
 
 
 const AiChat = () => {
@@ -201,38 +202,39 @@ const AiChat = () => {
             //     // Якщо жодних посилань не знайдено, повертаємо просто текст
             //     return parts.length > 0 ? parts : content;
             // };
+
     const formatMessage = (content) => {
-        const markdownLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+        const markdownLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g;
+
         const parts = [];
         let lastIndex = 0;
         let match;
 
         while ((match = markdownLinkRegex.exec(content)) !== null) {
-            const fullUrl = match[2];
-            const label = match[1];
-
-            // Додаємо текст перед лінком
             if (match.index > lastIndex) {
                 parts.push(content.substring(lastIndex, match.index));
             }
 
-            // Якщо це наш внутрішній маршрут
-            if (fullUrl.startsWith("https://homyz-estate.xyz")) {
-                const relativePath = fullUrl.replace("https://homyz-estate.xyz", "");
+            const label = match[1];
+            const fullUrl = match[2];
+
+            // Якщо внутрішнє посилання на properties
+            if (fullUrl.startsWith("/properties/")) {
                 parts.push(
-                    <Link key={match.index} to={relativePath} className="message-link">
+                    <Link key={match.index} to={fullUrl} className="message-link">
                         {label}
                     </Link>
                 );
-            } else {
-                // Зовнішні посилання — залишаємо <a>
+            }
+            // Якщо зовнішнє
+            else {
                 parts.push(
                     <a
                         key={match.index}
                         href={fullUrl}
-                        className="message-link"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="message-link"
                     >
                         {label}
                     </a>
@@ -248,6 +250,7 @@ const AiChat = () => {
 
         return parts.length > 0 ? parts : content;
     };
+
     return (
         <div className="chat-container">
             {/* Header */}
