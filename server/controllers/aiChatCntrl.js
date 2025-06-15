@@ -35,7 +35,7 @@ async function fetchResidencies() {
         console.error("Error fetching residencies:", err);
         return [];
     }
-}
+} //https://homyz-estate.xyz/properties/ + id
 
 function createSystemPrompt(language, buildingsData) {
     const prompts = {
@@ -48,7 +48,7 @@ function createSystemPrompt(language, buildingsData) {
     1. Завжди відповідай українською мовою
     2. Аналізуй потреби клієнта (бюджет, локація, опис, кількість кімнат)
     3. Рекомендуй найбільш підходящі варіанти
-    4. Для кожної рекомендації ОБОВ'ЯЗКОВО додавай пряме посилання у форматі Markdown: [текст](URL), посилання формуються як https://homyz-estate.xyz/properties/ + айді запису
+    4. Для кожної рекомендації ОБОВ'ЯЗКОВО додавай пряме посилання у форматі Markdown: [текст](URL), посилання формуються як /properties/ + айді запису
     5. Порівнюй варіанти за ціною та локацією
     6. Враховуй додаткові зручності
     7. Будь дружелюбним та корисним
