@@ -85,7 +85,7 @@ const AddLocation = ({ propertyDetails, setPropertyDetails, nextStep }) => {
       </div>
 
       <Group position="center" mt={"xl"}>
-        <Button type="submit">Next Step</Button>
+        <Button type="submit">Наступний крок</Button>
       </Group>
     </form>
   );

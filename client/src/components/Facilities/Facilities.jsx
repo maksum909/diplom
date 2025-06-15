@@ -106,10 +106,10 @@ const Facilities = ({
         />
         <Group position="center" mt="xl">
           <Button variant="default" onClick={prevStep}>
-            Back
+            Назад
           </Button>
           <Button type="submit" color="green" disabled={isLoading}>
-            {isLoading ? "Submitting" : "Add Property"}
+            {isLoading ? "Відправка..." : "Додати нерухомість"}
           </Button>
         </Group>
       </form>
