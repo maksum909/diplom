@@ -209,10 +209,10 @@ const AiChat = () => {
                 <div className="header-content">
                     <h1 className="header-title">
                         <Bot className="header-icon" />
-                        AI real estate consultant
+                        AI помічник
                     </h1>
                     <p className="header-subtitle">
-                        Find the perfect property for rent based on your criteria
+                        Знайдіть найкращу нерухомість для вас
                     </p>
                 </div>
             </div>
@@ -278,7 +278,7 @@ const AiChat = () => {
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 onKeyPress={handleKeyPress}
-                                placeholder="Describe the property you are looking for..."
+                                placeholder="Опишіть нерухомість, яку ви шукаєте..."
                                 className="message-input"
                                 rows="3"
                                 disabled={isLoading}
@@ -293,9 +293,9 @@ const AiChat = () => {
                         </div>
 
                         <div className="input-footer">
-                            <span className="language-support">Supported languages: Ukrainian and English</span>
+                            <span className="language-support">Підтримується українська та англійська мови</span>
                             <span className="current-language">
-                                Language:
+                                Мова:
                                 <span className="language-indicator">
                                     {userLanguage === 'uk' ? '🇺🇦 Українська' : '🇺🇸 English'}
                                 </span>

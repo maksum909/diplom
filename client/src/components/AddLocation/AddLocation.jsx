@@ -55,7 +55,7 @@ const AddLocation = ({ propertyDetails, setPropertyDetails, nextStep }) => {
           <Select
             w={"100%"}
             withAsterisk
-            label="Country"
+            label="Країна"
             clearable
             searchable
             data={getAll()}
@@ -65,14 +65,14 @@ const AddLocation = ({ propertyDetails, setPropertyDetails, nextStep }) => {
           <TextInput
             w={"100%"}
             withAsterisk
-            label="City"
+            label="Місто"
             {...form.getInputProps("city", { type: "input" })}
           />
 
           <TextInput
             w={"100%"}
             withAsterisk
-            label="Address"
+            label="Адреса"
             {...form.getInputProps("address", { type: "input" })}
           />
         </div>

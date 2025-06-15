@@ -8,19 +8,18 @@ const Footer = () => {
         <div className="flexColStart f-left">
           <img src="./logo2.png" alt="" width={120} />
           <span className="secondaryText">
-            Our vision is to make all people <br />
-            the best place to live for them.
+            Наше міркування - створити найкращий сервіс для надання послуг.
           </span>
         </div>
 
         <div className="flexColStart f-right">
-          <span className="primaryText">Information</span>
-          <span className="secondaryText">145 New York, FL 5467, USA</span>
+          <span className="primaryText">Інформація</span>
+          <span className="secondaryText">Луцьк, Волинська область, Україна</span>
           <div className="flexCenter f-menu">
-            <span>Property</span>
-            <span>Services</span>
-            <span>Product</span>
-            <span>About Us</span>
+            <span>Оголошення</span>
+            <span>Послуги</span>
+            <span>Продукт</span>
+            <span>Про нас</span>
           </div>
         </div>
       </div>

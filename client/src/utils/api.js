@@ -19,7 +19,7 @@ export const getAllProperties = async () => {
     }
     return response.data;
   } catch (error) {
-    toast.error("Something went wrong");
+    toast.error("Щось пішло не так");
     throw error;
   }
 };
@@ -35,7 +35,7 @@ export const getProperty = async (id) => {
     }
     return response.data;
   } catch (error) {
-    toast.error("Something went wrong");
+    toast.error("Щось пішло не так");
     throw error;
   }
 };
@@ -52,7 +52,7 @@ export const createUser = async (email, token) => {
       }
     );
   } catch (error) {
-    toast.error("Something went wrong, Please try again");
+    toast.error("Щось пішло не так, будь ласка, спробуйте ще раз");
     throw error;
   }
 };
@@ -73,7 +73,7 @@ export const bookVisit = async (date, propertyId, email, token) => {
       }
     );
   } catch (error) {
-    toast.error("Something went wrong, Please try again");
+    toast.error("Щось пішло не так, будь ласка, спробуйте ще раз");
     throw error;
   }
 };
@@ -92,7 +92,7 @@ export const removeBooking = async (id, email, token) => {
       }
     );
   } catch (error) {
-    toast.error("Something went wrong, Please try again");
+    toast.error("Щось пішло не так, будь ласка, спробуйте ще раз");
 
     throw error;
   }
@@ -137,7 +137,7 @@ export const getAllFav = async (email, token) => {
 
   }catch(e)
   {
-    toast.error("Something went wrong while fetching favs");
+    toast.error("Щось пішло не так, будь ласка, спробуйте ще раз");
     throw e
   }
 }
@@ -162,7 +162,7 @@ export const getAllBookings = async (email, token) => {
 
 
   } catch (error) {
-    toast.error("Something went wrong while fetching bookings");
+    toast.error("Щось пішло не так, будь ласка, спробуйте ще раз");
     throw error
   }
 }

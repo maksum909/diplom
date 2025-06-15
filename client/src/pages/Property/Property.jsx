@@ -41,7 +41,7 @@ const Property = () => {
         bookings: prev.bookings.filter((booking) => booking?.id !== id),
       }));
 
-      toast.success("Booking cancelled", { position: "bottom-right" });
+      toast.success("Бронювання відмінено", { position: "bottom-right" });
     },
   });
 
@@ -83,7 +83,7 @@ const Property = () => {
             <div className="flexStart head">
               <span className="primaryText">{data?.title}</span>
               <span className="orangeText" style={{ fontSize: "1.5rem" }}>
-                $ {data?.price}
+                ₴ {data?.price}
               </span>
             </div>
 
@@ -92,19 +92,19 @@ const Property = () => {
               {/* bathrooms */}
               <div className="flexStart facility">
                 <FaShower size={20} color="#1F3E72" />
-                <span>{data?.facilities?.bathrooms} Bathrooms</span>
+                <span>{data?.facilities?.bathrooms} Ванні кімнати</span>
               </div>
 
               {/* parkings */}
               <div className="flexStart facility">
                 <AiTwotoneCar size={20} color="#1F3E72" />
-                <span>{data?.facilities.parkings} Parking</span>
+                <span>{data?.facilities.parkings} Паркінг</span>
               </div>
 
               {/* rooms */}
               <div className="flexStart facility">
                 <MdMeetingRoom size={20} color="#1F3E72" />
-                <span>{data?.facilities.bedrooms} Room/s</span>
+                <span>{data?.facilities.bedrooms} Кімната/Кімнати</span>
               </div>
             </div>
 
@@ -135,10 +135,10 @@ const Property = () => {
                   onClick={() => cancelBooking()}
                   disabled={cancelling}
                 >
-                  <span>Cancel booking</span>
+                  <span>Відмінити бронювання</span>
                 </Button>
                 <span>
-                  Your visit already booked for date{" "}
+                  Ваш візит вже забронюваний на дату{" "}
                   {bookings?.filter((booking) => booking?.id === id)[0].date}
                 </span>
               </>
@@ -149,7 +149,7 @@ const Property = () => {
                   validateLogin() && setModalOpened(true);
                 }}
               >
-                Book your visit
+                Забронювати
               </button>
             )}
 

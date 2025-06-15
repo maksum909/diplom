@@ -6,12 +6,12 @@ const SearchBar = ({ filter, setFilter }) => {
     <div className="flexCenter search-bar">
       <HiLocationMarker color="var(--blue)" size={25} />
       <input
-        placeholder="Search by title/city/country..."
+        placeholder="Пошук за назвою/містом/країною..."
         type="text"
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
       />
-      <button className="button">Search</button>
+      <button className="button">Пошук</button>
     </div>
   );
 };

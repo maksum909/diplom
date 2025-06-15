@@ -48,14 +48,14 @@ const AddPropertyModal = ({ opened, setOpened }) => {
           breakpoint="sm"
           allowNextStepsSelect={false}
         >
-          <Stepper.Step label="Location" description="Address">
+          <Stepper.Step label="Місцезнаходження" description="Адреса">
             <AddLocation
               nextStep={nextStep}
               propertyDetails={propertyDetails}
               setPropertyDetails={setPropertyDetails}
             />
           </Stepper.Step>
-          <Stepper.Step label="Images" description="Upload ">
+          <Stepper.Step label="Зображення" description="Завантажити ">
             <UploadImage
               prevStep={prevStep}
               nextStep={nextStep}
@@ -63,7 +63,7 @@ const AddPropertyModal = ({ opened, setOpened }) => {
               setPropertyDetails={setPropertyDetails}
             />
           </Stepper.Step>
-          <Stepper.Step label="Basics" description="Details">
+          <Stepper.Step label="Базові деталі" description="Деталі">
             <BasicDetails
               prevStep={prevStep}
               nextStep={nextStep}
@@ -82,7 +82,7 @@ const AddPropertyModal = ({ opened, setOpened }) => {
             />
           </Stepper.Step>
           <Stepper.Completed>
-            Completed, click back button to get to previous step
+            Завершено, натисніть кнопку "Назад" для повернення на попередній етап
           </Stepper.Completed>
         </Stepper>
       </Container>

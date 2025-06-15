@@ -14,7 +14,7 @@ const BasicDetails = ({ prevStep, nextStep, propertyDetails, setPropertyDetails 
       title: (value) => validateString(value),
       description: (value) => validateString(value),
       price: (value) =>
-          value < 1000 ? "Must be greater than 999 dollars" : null,
+          value < 1 ? "Ціна повинна бути більше 1 грн" : null,
     },
   });
 
@@ -36,29 +36,29 @@ const BasicDetails = ({ prevStep, nextStep, propertyDetails, setPropertyDetails 
         }}>
         <TextInput
           withAsterisk
-          label="Title"
-          placeholder="Property Name"
+          label="Опис"
+          placeholder="Назва"
           {...form.getInputProps("title")}
         />
         <Textarea
-          placeholder="Description"
-          label="Description"
+          placeholder="Опис"
+          label="Опис"
           withAsterisk
           {...form.getInputProps("description")}
         />
         <NumberInput
           withAsterisk
-          label="Price"
+          label="Ціна"
           placeholder="1000"
           min={0}
           {...form.getInputProps("price")}
         />
         <Group position="center" mt="xl">
           <Button variant="default" onClick={prevStep}>
-            Back
+            Назад
           </Button>
           <Button type="submit">
-            Next step
+            Наступний крок
           </Button>
         </Group>
       </form>
