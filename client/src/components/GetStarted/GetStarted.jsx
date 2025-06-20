@@ -5,7 +5,7 @@ const GetStarted = () => {
     <div id="get-started" className="g-wrapper">
       <div className="paddings innerWidth g-container">
         <div className="flexColCenter inner-container">
-          <span className="primaryText">Почніть з Homyz</span>
+          <span className="primaryText">Почніть з ESTATORA</span>
           <span className="secondaryText">
             Підписуйтесь та знайдіть надзвичайно привабливі ціни на оголошення.
             <br />

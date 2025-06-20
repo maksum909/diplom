@@ -14,48 +14,49 @@ const Hero = () => {
           <div className="hero-title">
             <div className="orange-circle" />
             <motion.h1
-            initial={{ y: "2rem", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{
-              duration: 2,
-              type: "ease-in",
-            }}
+              initial={{ y: "2rem", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 2,
+                type: "ease-in",
+              }}
             >
               Досліджуйте<br />
               найкращу
               <br /> Нерухомість
             </motion.h1>
           </div>
+
           <div className="flexColStart secondaryText flexhero-des">
-            <span>Знайдіть різноманітність властивостей, які підходять вам</span>
-            <span>Забудьте про труднощі в пошуку проживання для вас</span>
+            <span>Знайдіть різноманітність нерухомості, яка підходить вам</span>
+            <span>Забудьте про труднощі в пошуку нерухомості</span>
           </div>
 
-          <SearchBar filter={filter} setFilter={setFilter}/>
+          <SearchBar filter={filter} setFilter={setFilter} />
 
           <div className="flexCenter stats">
             <div className="flexColCenter stat">
               <span>
-                <CountUp start={8800} end={9000} duration={4} /> <span>+</span>
+                <CountUp start={88} end={100} duration={4} /> <span>+</span>
               </span>
               <span className="secondaryText">Преміум продуктів</span>
             </div>
 
             <div className="flexColCenter stat">
               <span>
-                <CountUp start={1950} end={2000} duration={4} /> <span>+</span>
+                <CountUp start={5} end={20} duration={4} /> <span>+</span>
               </span>
               <span className="secondaryText">Задоволені клієнти</span>
             </div>
 
             <div className="flexColCenter stat">
               <span>
-                <CountUp end={28} /> <span>+</span>
+                <CountUp start={10} end={28} duration={4} /> <span>+</span>
               </span>
               <span className="secondaryText">Виграно нагород</span>
             </div>
           </div>
-        </div>
+        </div> {/* <-- Закриваємо .hero-left */}
 
         {/* right side */}
         <div className="flexCenter hero-right">
@@ -68,10 +69,10 @@ const Hero = () => {
             }}
             className="image-container"
           >
-            <img src="./hero-image.png" alt="houses" />
+            <img src="./80260d79b07b22c601829a0af7721b62.jpg" alt="houses" />
           </motion.div>
         </div>
-      </div>
+      </div> {/* <-- Закриваємо .hero-container */}
     </section>
   );
 };

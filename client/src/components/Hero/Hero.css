@@ -8,7 +8,7 @@
 
 .hero-container {
   justify-content: space-around;
-  align-items: flex-end; 
+  align-items: flex-end;
 }
 
 
@@ -67,9 +67,11 @@
   border-radius: 15rem 15rem 0 0;
   border: 8px solid rgba(255, 255, 255, 0.12);
 }
-.image-container>img{
-    width: 100%;
-    height: 100%;
+.image-container>img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  /* збільшує на 20% */
 }
 
 /* mobile screens */
