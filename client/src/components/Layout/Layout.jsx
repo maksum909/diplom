@@ -27,7 +27,7 @@ const Layout = () => {
 
       const res = await getAccessTokenWithPopup({
         authorizationParams: {
-          audience: "https://homyz-estate.xyz/api",
+          audience: "https://estatora.online/api",
           scope: "openid profile email",
         },
       });

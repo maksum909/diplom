@@ -122,7 +122,7 @@ const AiChat = () => {
         setIsLoading(true);
 
         try {
-            const response = await fetch('https://homyz-estate.xyz/api/ai-chat/', {
+            const response = await fetch('https://estatora.online/api/ai-chat/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
