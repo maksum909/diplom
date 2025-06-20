@@ -8,14 +8,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Auth0Provider
       domain="dev-rg1xwvj44wl04jbz.us.auth0.com"
-     //domain="http://localhost:8000"
-     //clientId="RXlGXkr49Ev5MHpvAC6vKkZ4bVn11iwl"
       clientId="TNMfEmtrj8v23fvfmqAMsBKNFT6dGSqV"
      authorizationParams={{
-       //redirect_uri: "https://full-stack-real-estate-youtube-sooty.vercel.app"https://dev-n4h6byrcjwasuswo.us.auth0.com/api/v2/
-      redirect_uri: "https://homyz-estate.xyz"
+      redirect_uri: "https://estatora.online"
      }}
-     audience="https://homyz-estate.xyz/api"
+     audience="https://estatora.online/api"
      scope="openid profile email"
     >
       <App />

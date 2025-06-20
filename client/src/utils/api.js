@@ -5,8 +5,10 @@ import { toast } from "react-toastify";
 export const api = axios.create({
   //baseURL: "https://full-stack-real-estate-youtube.vercel.app/api",
   //baseURL: "http://localhost:8000/api",
-  baseURL: "https://homyz-estate.xyz/api",
+  //baseURL: "https://homyz-estate.xyz/api",
+  baseURL: "https://estatora.online/api",
 });
+
 
 export const getAllProperties = async () => {
   try {

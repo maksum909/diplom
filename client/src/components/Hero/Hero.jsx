@@ -32,7 +32,7 @@ const Hero = () => {
             <span>Забудьте про труднощі в пошуку нерухомості</span>
           </div>
 
-          <SearchBar filter={filter} setFilter={setFilter} />
+          {/* <SearchBar filter={filter} setFilter={setFilter} /> */}
 
           <div className="flexCenter stats">
             <div className="flexColCenter stat">
