@@ -5,7 +5,8 @@
 }
 .App>:nth-child(1)
 {
-  background: var(--black);
+  /* background: var(--black); */
+  background-color: #23243e;
   position: relative;
 }
 .white-gradient{

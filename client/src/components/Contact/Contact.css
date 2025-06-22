@@ -47,7 +47,7 @@
 }
 
 .mode .button:hover {
-  background: var(--blue-gradient);
+  background: #6f86df;
   color: white;
   scale: 0.8;
 }
